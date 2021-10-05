@@ -9,6 +9,7 @@
     </head>
 
     <body>
+        <div id="overlay" style="z-index:1000; background:rgba(0,0,0,.5); position: fixed; inset: 0"></div>
         <h2>---------- Present embed below this ----------</h2>
         <iframe allowfullscreen="allowfullscreen" height="400" src="https://prezi.com/embed/vtde5pd3pduc/?autoplay=1" width="550"></iframe>
         <h2>---------- Present embed above this ----------</h2>
@@ -32,6 +33,13 @@
 
         <h2>Embed below 240px</h2>
         <iframe src="https://prezi.com/v/embed/bvffs8uqqlgt/?frontend-bundle-video-view-page=video-view-page.0.2.1487" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="113" width="200"></iframe> -->
+        
+        <script>
+            window.setTimeout(() => {
+                const overlay = document.querySelector("#overlay");
+                overlay.remove();
+            }, 5000);
+        </script>
     </body>
 
 </html>
